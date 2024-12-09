@@ -1,0 +1,124 @@
+@options
+@packages
+-classpath
+'C:/Users/Titan/.m2/repository/org/apache/commons/commons-math3/3.4.1/commons-math3-3.4.1.jar;C:/Users/Titan/.m2/repository/org/jgrapht/jgrapht-core/1.5.1/jgrapht-core-1.5.1.jar;C:/Users/Titan/.m2/repository/org/jheaps/jheaps/0.13/jheaps-0.13.jar;C:/Users/Titan/.m2/repository/com/opencsv/opencsv/3.7/opencsv-3.7.jar;C:/Users/Titan/.m2/repository/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2.jar;C:/Users/Titan/.m2/repository/com/google/guava/guava/32.0.1-jre/guava-32.0.1-jre.jar;C:/Users/Titan/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar;C:/Users/Titan/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:/Users/Titan/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar;C:/Users/Titan/.m2/repository/org/checkerframework/checker-qual/3.33.0/checker-qual-3.33.0.jar;C:/Users/Titan/.m2/repository/com/google/errorprone/error_prone_annotations/2.18.0/error_prone_annotations-2.18.0.jar;C:/Users/Titan/.m2/repository/com/google/j2objc/j2objc-annotations/2.8/j2objc-annotations-2.8.jar;C:/Users/Titan/.m2/repository/com/googlecode/json-simple/json-simple/1.1.1/json-simple-1.1.1.jar;C:/Users/Titan/.m2/repository/org/apache/commons/commons-csv/1.10.0/commons-csv-1.10.0.jar'
+-encoding
+'UTF-8'
+-protected
+-sourcepath
+'C:/Users/Titan/Downloads/iQuantum-1.0.0-beta/modules/iquantum/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2024 <a href="http://cloudbus.org/">The Cloud Computing and Distributed Systems (CLOUDS) Laboratory, The University of Melbourne</a>. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/Titan/Downloads/iQuantum-1.0.0-beta/modules/iquantum/target/apidocs'
+-docencoding
+'UTF-8'
+-Xdoclint:none
+-doctitle
+'iquantum 1.0 API'
+-linkoffline
+'https://docs.oracle.com/javase/8/docs/api' 'C:/Users/Titan/Downloads/iQuantum-1.0.0-beta/modules/iquantum/target/javadoc-bundle-options'
+-tag
+"pre:a:Precondition:"
+-tag
+"post:a:Postcondition:"
+-use
+-version
+-windowtitle
+'iquantum 1.0 API'
+org.iquantum.backends.classical.container.containerPlacementPolicies
+org.iquantum.backends.classical.container.containerProvisioners
+org.iquantum.backends.classical.container.containerSelectionPolicies
+org.iquantum.backends.classical.container.containerVmProvisioners
+org.iquantum.backends.classical.container.core
+org.iquantum.backends.classical.container.hostSelectionPolicies
+org.iquantum.backends.classical.container.lists
+org.iquantum.backends.classical.container.resourceAllocatorMigrationEnabled
+org.iquantum.backends.classical.container.resourceAllocators
+org.iquantum.backends.classical.container.schedulers
+org.iquantum.backends.classical.container.utils
+org.iquantum.backends.classical.container.vmSelectionPolicies
+org.iquantum.backends.classical
+org.iquantum.backends.quantum
+org.iquantum.backends.quantum.qubittopologies
+org.iquantum.brokers
+org.iquantum.core
+org.iquantum.core.predicates
+org.iquantum.datacenters
+org.iquantum.distributions
+org.iquantum.fog.application
+org.iquantum.fog.application.selectivity
+org.iquantum.fog.entities
+org.iquantum.fog.gui.core
+org.iquantum.fog.gui.dialog
+org.iquantum.fog.gui.example
+org.iquantum.fog.mobilitydata
+org.iquantum.fog.placement
+org.iquantum.fog.policy
+org.iquantum.fog.scheduler
+org.iquantum.fog.test
+org.iquantum.fog.test.perfeval
+org.iquantum.fog.utils
+org.iquantum.fog.utils.distribution
+org.iquantum.gateways
+org.iquantum.lists
+org.iquantum.models
+org.iquantum.network.datacenter
+org.iquantum.network
+org.iquantum.policies.ctasks
+org.iquantum.policies.qtasks
+org.iquantum.policies.qubitMapping
+org.iquantum.policies.vm
+org.iquantum.power.lists
+org.iquantum.power.models
+org.iquantum.power
+org.iquantum.provisioners
+org.iquantum.sdn
+org.iquantum.sdn.example
+org.iquantum.sdn.example.policies
+org.iquantum.sdn.example.topogenerators
+org.iquantum.sdn.graph.core
+org.iquantum.sdn.graph.dialog
+org.iquantum.sdn.graph.example
+org.iquantum.sdn.overbooking
+org.iquantum.sdn.power
+org.iquantum.sdn.request
+org.iquantum.tasks
+org.iquantum.utils.datacloud
+org.iquantum.utils
+C:\Users\Titan\.m2\repository\org\apache\commons\commons-math3\3.4.1\commons-math3-3.4.1.jar = 1732616782276
+C:\Users\Titan\.m2\repository\org\jgrapht\jgrapht-core\1.5.1\jgrapht-core-1.5.1.jar = 1733090497482
+C:\Users\Titan\.m2\repository\org\jheaps\jheaps\0.13\jheaps-0.13.jar = 1733090498139
+C:\Users\Titan\.m2\repository\com\opencsv\opencsv\3.7\opencsv-3.7.jar = 1732616781833
+C:\Users\Titan\.m2\repository\org\apache\commons\commons-lang3\3.3.2\commons-lang3-3.3.2.jar = 1732616782037
+C:\Users\Titan\.m2\repository\com\google\guava\guava\32.0.1-jre\guava-32.0.1-jre.jar = 1732616782935
+C:\Users\Titan\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar = 1732616782150
+C:\Users\Titan\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar = 1732616781942
+C:\Users\Titan\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar = 1732616781822
+C:\Users\Titan\.m2\repository\org\checkerframework\checker-qual\3.33.0\checker-qual-3.33.0.jar = 1732616782074
+C:\Users\Titan\.m2\repository\com\google\errorprone\error_prone_annotations\2.18.0\error_prone_annotations-2.18.0.jar = 1732616781821
+C:\Users\Titan\.m2\repository\com\google\j2objc\j2objc-annotations\2.8\j2objc-annotations-2.8.jar = 1732616781935
+C:\Users\Titan\.m2\repository\com\googlecode\json-simple\json-simple\1.1.1\json-simple-1.1.1.jar = 1732616781825
+C:\Users\Titan\.m2\repository\org\apache\commons\commons-csv\1.10.0\commons-csv-1.10.0.jar = 1732616782125
+C:\Users\Titan\Downloads\iQuantum-1.0.0-beta\modules\iquantum\src\main\java\.DS_Store = 1692241412000
+C:\Users\Titan\Downloads\iQuantum-1.0.0-beta\modules\iquantum\src\main\java = 1692241412000
+C:\Users\Titan\Downloads\iQuantum-1.0.0-beta\modules\iquantum\target\apidocs\allclasses-index.html = 1733115409956
+C:\Users\Titan\Downloads\iQuantum-1.0.0-beta\modules\iquantum\target\apidocs\allpackages-index.html = 1733115409960
+C:\Users\Titan\Downloads\iQuantum-1.0.0-beta\modules\iquantum\target\apidocs\constant-values.html = 1733115406242
+C:\Users\Titan\Downloads\iQuantum-1.0.0-beta\modules\iquantum\target\apidocs\deprecated-list.html = 1733115409275
+C:\Users\Titan\Downloads\iQuantum-1.0.0-beta\modules\iquantum\target\apidocs\element-list = 1733115405446
+C:\Users\Titan\Downloads\iQuantum-1.0.0-beta\modules\iquantum\target\apidocs\help-doc.html = 1733115410285
+C:\Users\Titan\Downloads\iQuantum-1.0.0-beta\modules\iquantum\target\apidocs\index-all.html = 1733115410254
+C:\Users\Titan\Downloads\iQuantum-1.0.0-beta\modules\iquantum\target\apidocs\index.html = 1733115409291
+C:\Users\Titan\Downloads\iQuantum-1.0.0-beta\modules\iquantum\target\apidocs\member-search-index.js = 1733115409969
+C:\Users\Titan\Downloads\iQuantum-1.0.0-beta\modules\iquantum\target\apidocs\module-search-index.js = 1733115409963
+C:\Users\Titan\Downloads\iQuantum-1.0.0-beta\modules\iquantum\target\apidocs\overview-summary.html = 1733115410284
+C:\Users\Titan\Downloads\iQuantum-1.0.0-beta\modules\iquantum\target\apidocs\overview-tree.html = 1733115409275
+C:\Users\Titan\Downloads\iQuantum-1.0.0-beta\modules\iquantum\target\apidocs\package-search-index.js = 1733115409964
+C:\Users\Titan\Downloads\iQuantum-1.0.0-beta\modules\iquantum\target\apidocs\search.html = 1733115410268
+C:\Users\Titan\Downloads\iQuantum-1.0.0-beta\modules\iquantum\target\apidocs\serialized-form.html = 1733115406382
+C:\Users\Titan\Downloads\iQuantum-1.0.0-beta\modules\iquantum\target\apidocs\tag-search-index.js = 1733115409984
+C:\Users\Titan\Downloads\iQuantum-1.0.0-beta\modules\iquantum\target\apidocs\type-search-index.js = 1733115409966
