@@ -19,6 +19,7 @@ import org.iquantum.tasks.QTask;
 import org.iquantum.utils.Log;
 import org.iquantum.utils.QTaskImporter;
 import org.iquantum.utils.GraphicalTopoRepr;
+import org.iquantum.utils.QTaskListGui;
 
 
 import java.io.IOException;
@@ -62,6 +63,7 @@ public class iQuantumExample8 {
 //        // Step 8: Print the results when simulation is over
         List<QTask> newList = qBroker.getQTaskReceivedList();
         printQTaskList(newList);
+        QTaskListGui.showQTaskListInGUI(newList);
 
         Log.printLine("iQuantum MultiQPU Example finished!");
     }
