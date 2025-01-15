@@ -17,6 +17,7 @@ import org.iquantum.datacenters.QDatacenterExtended;
 import org.iquantum.policies.qtasks.QTaskSchedulerFCFSMQ;
 import org.iquantum.tasks.QTask;
 import org.iquantum.utils.Log;
+import org.iquantum.utils.QTaskExporter;
 import org.iquantum.utils.QTaskImporter;
 import org.iquantum.utils.GraphicalTopoRepr;
 import org.iquantum.utils.QTaskListGui;
@@ -41,6 +42,7 @@ public class iQuantumExample8 {
         Calendar calendar = Calendar.getInstance();
         boolean trace_flag = true;  // trace events
         iQuantum.init(num_user, calendar, trace_flag);
+        String exampleName = "QExample-8";
 
         // Step 2: Create a QDatacenter and two quantum nodes (IBM Hanoi and IBM Geneva)
         QDatacenterExtended qDatacenter = createQDatacenter("QDatacenter_0");
@@ -62,8 +64,11 @@ public class iQuantumExample8 {
 //
 //        // Step 8: Print the results when simulation is over
         List<QTask> newList = qBroker.getQTaskReceivedList();
-        printQTaskList(newList);
+        // printQTaskList(newList);
         QTaskListGui.showQTaskListInGUI(newList);
+        // Formatting output for better aligned list.
+        QTaskExporter.printQTaskList(QTaskList);
+        // QTaskExporter.extractQTaskListToCSV(newList, exampleName);
 
         Log.printLine("iQuantum MultiQPU Example finished!");
     }
@@ -84,9 +89,11 @@ public class iQuantumExample8 {
                 QTask.setQNodeId(qNodeList.get(random.nextInt(qNodeList.size())).getId());
                 QTaskList.add(QTask);
             }
+            //  Sorting the QTasks [List] based on Least Executable Circuit Layers First
+            QTaskList.sort(Comparator.comparingInt(QTask::getNumECL));
+
             /** Graphical representation of a Qtask topology */
             GraphicalTopoRepr.repr(QTasks.get(0).getQubitTopology());
-
         } catch (IOException e) {
             System.err.println("Error reading CSV file: " + e.getMessage());
         }
@@ -119,6 +126,7 @@ public class iQuantumExample8 {
         QNodeMQ qNode1 = IBMQNodeMQ.createNode(0,"ibm_cairo",new QTaskSchedulerFCFSMQ());
         QNodeMQ qNode2 = IBMQNodeMQ.createNode(1,"ibm_hanoi",new QTaskSchedulerFCFSMQ());
         //        QubitTopology.printTopology(qNode1.getQubitTopology());
+
         /** Graphical representation of a Qnode topology */
         GraphicalTopoRepr.repr(qNode1.getQPUList().getQubitTopologyOfQPUById(0));
         // GraphicalTopoRepr.repr(qNode2.getQPUList().getQubitTopologyOfQPUById(0));
