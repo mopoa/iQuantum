@@ -1,5 +1,5 @@
 /**
- * iQuantum Example 5
+ * iQuantum Example 8
  * This example shows how to create a QDatacenter with two 27-qubit quantum nodes following the topology of
  * IBM Hanoi and IBM Geneva automatically from the datasheet. Then, it creates a QBroker and four QTasks to
  * be submitted to the QBroker. Finally, it starts the simulation and prints the results.
@@ -18,6 +18,8 @@ import org.iquantum.policies.qtasks.QTaskSchedulerFCFSMQ;
 import org.iquantum.tasks.QTask;
 import org.iquantum.utils.Log;
 import org.iquantum.utils.QTaskImporter;
+import org.iquantum.utils.GraphicalTopoRepr;
+
 
 import java.io.IOException;
 import java.nio.file.Path;
@@ -80,6 +82,9 @@ public class iQuantumExample8 {
                 QTask.setQNodeId(qNodeList.get(random.nextInt(qNodeList.size())).getId());
                 QTaskList.add(QTask);
             }
+            /** Graphical representation of a Qtask topology */
+            GraphicalTopoRepr.repr(QTasks.get(0).getQubitTopology());
+
         } catch (IOException e) {
             System.err.println("Error reading CSV file: " + e.getMessage());
         }
@@ -111,7 +116,10 @@ public class iQuantumExample8 {
         // Automatically create two quantum nodes (IBM Hanoi and IBM Cairo) from the dataset
         QNodeMQ qNode1 = IBMQNodeMQ.createNode(0,"ibm_cairo",new QTaskSchedulerFCFSMQ());
         QNodeMQ qNode2 = IBMQNodeMQ.createNode(1,"ibm_hanoi",new QTaskSchedulerFCFSMQ());
-//        QubitTopology.printTopology(qNode1.getQubitTopology());
+        //        QubitTopology.printTopology(qNode1.getQubitTopology());
+        /** Graphical representation of a Qnode topology */
+        GraphicalTopoRepr.repr(qNode1.getQPUList().getQubitTopologyOfQPUById(0));
+        // GraphicalTopoRepr.repr(qNode2.getQPUList().getQubitTopologyOfQPUById(0));
         qNodeList = new ArrayList<>();
         qNodeList.addAll(Arrays.asList(qNode1, qNode2));
         double timeZone = 0.0;
