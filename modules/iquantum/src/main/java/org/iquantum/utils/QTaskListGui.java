@@ -54,7 +54,7 @@ public class QTaskListGui {
 
         // Create the main frame
         JFrame frame = new JFrame("QTask List");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setSize(800, 900);
         frame.add(scrollPane);
         frame.setVisible(true);

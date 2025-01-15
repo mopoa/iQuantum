@@ -68,7 +68,7 @@ public class iQuantumExample8 {
         QTaskListGui.showQTaskListInGUI(newList);
         // Formatting output for better aligned list.
         QTaskExporter.printQTaskList(QTaskList);
-        // QTaskExporter.extractQTaskListToCSV(newList, exampleName);
+        QTaskExporter.extractQTaskListToCSV(newList, exampleName);
 
         Log.printLine("iQuantum MultiQPU Example finished!");
     }
@@ -125,7 +125,7 @@ public class iQuantumExample8 {
         // Automatically create two quantum nodes (IBM Hanoi and IBM Cairo) from the dataset
         QNodeMQ qNode1 = IBMQNodeMQ.createNode(0,"ibm_cairo",new QTaskSchedulerFCFSMQ());
         QNodeMQ qNode2 = IBMQNodeMQ.createNode(1,"ibm_hanoi",new QTaskSchedulerFCFSMQ());
-        //        QubitTopology.printTopology(qNode1.getQubitTopology());
+        //QubitTopology.printTopology(qNode1.getQubitTopology());
 
         /** Graphical representation of a Qnode topology */
         GraphicalTopoRepr.repr(qNode1.getQPUList().getQubitTopologyOfQPUById(0));
