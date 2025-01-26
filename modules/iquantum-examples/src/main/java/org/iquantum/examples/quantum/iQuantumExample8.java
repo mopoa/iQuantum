@@ -90,7 +90,7 @@ public class iQuantumExample8 {
                 QTaskList.add(QTask);
             }
             //  Sorting the QTasks [List] based on Least Executable Circuit Layers First
-            QTaskList.sort(Comparator.comparingInt(QTask::getNumECL));
+            // QTaskList.sort(Comparator.comparingInt(QTask::getNumECL));
 
             /** Graphical representation of a Qtask topology */
             GraphicalTopoRepr.repr(QTasks.get(0).getQubitTopology());
