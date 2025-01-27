@@ -140,39 +140,5 @@ public class iQuantumExample8 {
         QDatacenterExtended qDatacenter = new QDatacenterExtended(name, characteristics);
         return qDatacenter;
     }
-
-    /**
-     * Print the list of QTasks after the simulation
-     * @param list list of QTasks
-     */
-    private static void printQTaskList(List<QTask> list) {
-        int size = list.size();
-        QTask QTask;
-
-        String indent = "   ";
-        Log.printLine();
-        Log.printLine("========== OUTPUT ==========");
-        Log.printLine("QTask ID" + indent + "Status" + indent
-                + "QDCenter" + indent + "QNode ID" + indent + "Execution Time" + indent
-                + "Start Time" + indent + "Finish Time");
-
-        DecimalFormat dft = new DecimalFormat("###.##");
-        for (int i = 0; i < size; i++) {
-            QTask = list.get(i);
-            Log.print(indent + QTask.getQTaskId() + indent + indent);
-            if (QTask.getQTaskStatus() == QTask.SUCCESS) {
-                Log.print("SUCCESS");
-                Log.printLine(indent + indent + QTask.getResourceId()
-                        + indent + indent + indent + QTask.getQNodeId()
-                        + indent + indent + indent + dft.format(QTask.getActualQPUTime())
-                        + indent + indent + indent + indent + dft.format(QTask.getExecStartTime())
-                        + indent + indent + indent + dft.format(QTask.getFinishTime()));
-            }
-            else {
-                Log.printLine(QTask.getQTaskStatusString());
-            }
-        }
-    }
-
 }
 
